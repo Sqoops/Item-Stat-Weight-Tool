@@ -1,0 +1,42 @@
+﻿Slot	Name	Str	Agi	Stam	intellect	spirit	Armorvalue	arcaneresistance	fireresistance	natureresistance	frostresistance	shadowresistance	attackpower	AttackSpeed	blockchance	blockvalue	critchance	damage	Defense	dodgechance	healing	health	hitchance	hp5	mana	mp5	parrychance	reflect
+StatWeight		0,225	1,4	1,5	0	0,01	0,02	0,01	0,01	0,01	0,01	0,01	0,1	3,5	2	0,33	9	3,5	4	10	0	0,145	18	0,01	0	0	12,5	0,01
+Back	Cape of the Fire Salamander			5		10	181		20																			
+Back	Dragon's Blood Cape	9		22			116	5	5			5																
+Back	Onyxia Scale Cloak			7			43		16																			
+Back	Redoubt Cloak			15			45												10									
+Chest	Breastplate of Might	20		28			749		10						3				7									
+Chest	Breastplate of the Chromatic Flight	20	10	30			706		15																			
+Chest	Deathbone Chestplate			12		12	637												17									
+Chest	Ornate Adamantium Breastplate			22			807												10									
+Chest	Savage Gladiator Chain			13			369										2		20									
+Feet	Sabatons of Wrath	13		30			589		10							14			7									
+Finger	Archimtiros' Ring of Reckoning		14	28																								
+Finger	Hardened Stone Band	8		8															3									
+Finger	Heavy Dark Iron Ring			20			110												5									
+Finger	Myrmidon's Signet	10	7	17																								
+Finger	Ocean's Breeze	4	7	4					15																			
+Finger	Peridot Circle of Fire Resistance								21																			
+Finger	Ring of Binding						60	10	10	10	10	10							4									
+Finger	Tarnished Elven Ring		15																				1					
+Hands	Gauntlets of Might	22		17			468		7										5				1					
+Hands	Stonegrip Gauntlets	9		14			392												10									
+Head	Gyth's Skull of Fire Resistance			20			509		15										9									
+Head	Helm of Might	15		35			608		10										7	1								
+Head	Helm of Wrath	17		40			696				10	10							11									
+Legs	Dark Iron Leggings			14			778		30																			
+Legs	Leggings of Wrath	19		27			749	10	10											1								
+Legs	Legplates of the Eternal Guardian						742												22									
+Neck	Drakefire Amulet			10					15																			
+Neck	Medallion of Grand Marshal Morris			7															10									
+Neck	Medallion of Steadfast Might	9		13															8	1								
+Shoulders	Pauldrons of Wrath	13		27			642		10							27			7									
+Shoulders	Stockade Pauldrons			20		10	472												10									
+Trinket	Blazing Emblem								15																			
+Trinket	Force of Will																		10									
+Trinket	Onyxia Blood Talisman								15										8					7			1	
+Trinket	Royal Seal of Eldre'Thalas						200		10																			
+Waist	Belt of Might	21		15			421		7										5	1								
+Waist	Unmelting Ice Girdle	14	14	14			452				16								12									
+Wrist	Bracelets of Wrath	13		27			375																					
+Wrist	Emberplate Armguards of the Monkey		10	10			261		10																			
+Wrist	Wristguards of True Flight		19	11	6		198																1					

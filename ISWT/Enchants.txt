@@ -1,0 +1,17 @@
+﻿Slot	EnchantName	Str	Agi	Stam	intellect	spirit	Armorvalue	arcaneresistance	fireresistance	natureresistance	frostresistance	shadowresistance	attackpower	AttackSpeed	blockchance	blockvalue	critchance	damage	Defense	dodgechance	healing	health	hitchance	hp5	mana	mp5	parrychance	reflect
+Back	Enchant Cloak - Fire Resistance								7																			
+Back	Enchant Cloak - Lesser Agility		3																									
+Chest	Enchant Chest - Major Health																					100						
+Feet	Enchant Boots - Greater Stamina			7																								
+Hands	Enchant Gloves - Greater Agility		7																									
+Head	Libram of Constitution																					100						
+Head	Libram of Resilience								20																			
+Legs	Libram of Constitution																					100						
+Legs	Libram of Resilience								20																			
+Shoulders	Flame Mantle of the Dawn								5																			
+Wrist	Enchant Bracer - Deflection																		3									
+Wrist	Enchant Bracer - Superior Stamina			9																								
+Chest	Core Armor Kit																		3									
+Legs	Core Armor Kit																		3									
+Hands	Core Armor Kit																		3									
+Feet	Core Armor Kit																		3									

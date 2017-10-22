@@ -1,0 +1,225 @@
+﻿<Window x:Class="ISWT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ISWT"
+        mc:Ignorable="d"
+ Title="Item Stat Weight Tool" Height="600" Width="1000" MouseDown="Window_MouseDown">
+    <Grid Name="gridMain" Focusable="True">
+        <Menu IsMainMenu="True" VerticalAlignment="Top" Background="White">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit" InputGestureText="Alt+F4" Click="MenuItem_Click" />
+            </MenuItem>
+            <MenuItem Header="Info">
+                <MenuItem Header="How to change items" Name="menuItemUpdate" Click="menuItemUpdate_Click" />
+                <MenuItem Header="Tip" Name="menuItemTip" Click="menuItemTip_Click" />
+                <MenuItem Header="About" Name="menuItemAbout" Click="menuItemAbout_Click" />
+            </MenuItem>
+        </Menu>
+        <Grid Margin="0,20,0,0">
+            <GroupBox Header="Minimum Requirement" Height="220" HorizontalAlignment="Left" Margin="10,0,0,0" Name="groupBoxMinReq" VerticalAlignment="Top" Width="420">
+                <Grid>
+                    <StackPanel Name="sp1" Width="40" HorizontalAlignment="Left">
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqStrength" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqAgility" Width="40" TextAlignment="Right" SelectionOpacity="1" Height="22" VerticalAlignment="Top" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqStamina" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqIntellect" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqSpirit" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqArmorvalue" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqArcaneresistance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqFireresistance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqNatureresistance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                    </StackPanel>
+                    <StackPanel Name="sp2" Width="100" HorizontalAlignment="Left" Margin="40,0,0,0">
+                        <Label Content="Strength" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label10" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Agility" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label11" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Stamina" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label12" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Intellect" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label13" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Spirit" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label14" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Armorvalue" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label15" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Arcaneresistance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label16" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Fireresistance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label17" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Natureresistance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label18" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                    </StackPanel>
+                    <StackPanel Name="sp3" Width="40" HorizontalAlignment="Left" Margin="140,0,0,0">
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqFrostresistance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqShadowresistance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqAttackpower" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqAttackspeed" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqBlockchance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqBlockvalue" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqCritchance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqDamage" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqDefense" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                    </StackPanel>
+                    <StackPanel Name="sp4" Width="100" HorizontalAlignment="Left" Margin="180,0,0,0">
+                        <Label Content="Frostresistance" HorizontalAlignment="Right" HorizontalContentAlignment="Left" Name="label19" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Shadowresistance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label20" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Attackpower" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label21" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Attackspeed" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label31" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Blockchance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label22" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Blockvalue" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label23" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Critchance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label24" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Damage" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label34" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Defense" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label25" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                    </StackPanel>
+                    <StackPanel Name="sp5" Width="40" HorizontalAlignment="Left" Margin="280,0,0,0">
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqDodgechance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqHealing" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqHealth" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqHitchance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqHp5" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqMana" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqMp5" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqParrychance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0" x:Name="textBoxMinReqReflect" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                    </StackPanel>
+                    <StackPanel Name="sp6" Width="100" HorizontalAlignment="Left" Margin="320,0,0,0">
+                        <Label Content="Dodgechance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label26" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Healing" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label27" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Health" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label37" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Hitchance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label47" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Hp5" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label48" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Mana" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label49" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Mp5" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label77" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Parrychance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label28" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Reflect" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label88" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+            <Button Content="Optimize" Height="30" HorizontalAlignment="Left" Name="buttonSearch" VerticalAlignment="Top" Width="110" Click="buttonSearch_Click" HorizontalContentAlignment="Center" Margin="440,190,0,0" />
+            <GroupBox Header="StatWeight" Height="220" HorizontalAlignment="Left" Margin="560,0,0,0" Name="groupBoxStatWeight" VerticalAlignment="Top" Width="420">
+                <Grid>
+                    <StackPanel Name="sp7" Width="40" HorizontalAlignment="Left">
+                        <TextBox HorizontalAlignment="Left" Text="0.225" x:Name="textBoxWeightStrength" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="1.5" x:Name="textBoxWeightAgility" Width="40" TextAlignment="Right" SelectionOpacity="1" Height="22" VerticalAlignment="Top" />
+                        <TextBox HorizontalAlignment="Left" Text="1.5" x:Name="textBoxWeightStamina" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.0" x:Name="textBoxWeightIntellect" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.01" x:Name="textBoxWeightSpirit" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.02" x:Name="textBoxWeightArmorvalue" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.01" x:Name="textBoxWeightArcaneresistance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.01" x:Name="textBoxWeightFireresistance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.01" x:Name="textBoxWeightNatureresistance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                    </StackPanel>
+                    <StackPanel Name="sp8" Width="100" HorizontalAlignment="Left" Margin="40,0,0,0">
+                        <Label Content="Strength" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label110" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Agility" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label111" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Stamina" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label112" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Intellect" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label113" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Spirit" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label114" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Armorvalue" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label115" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Arcaneresistance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label116" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Fireresistance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label117" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Natureresistance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label118" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                    </StackPanel>
+                    <StackPanel Name="sp9" Width="40" HorizontalAlignment="Left" Margin="140,0,0,0">
+                        <TextBox HorizontalAlignment="Left" Text="0.01" x:Name="textBoxWeightFrostresistance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.01" x:Name="textBoxWeightShadowresistance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.1" x:Name="textBoxWeightAttackpower" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="3.5" x:Name="textBoxWeightAttackspeed" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="2.0" x:Name="textBoxWeightBlockchance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.33" x:Name="textBoxWeightBlockvalue" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="9.0" x:Name="textBoxWeightCritchance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="3.5" x:Name="textBoxWeightDamage" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="4.0" x:Name="textBoxWeightDefense" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                    </StackPanel>
+                    <StackPanel Name="sp10" Width="100" HorizontalAlignment="Left" Margin="180,0,0,0">
+                        <Label Content="Frostresistance" HorizontalAlignment="Right" HorizontalContentAlignment="Left" Name="label119" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Shadowresistance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label120" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Attackpower" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label121" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Attackspeed" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label131" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Blockchance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label122" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Blockvalue" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label123" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Critchance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label124" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Damage" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label134" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Defense" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label125" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                    </StackPanel>
+                    <StackPanel Name="sp11" Width="40" HorizontalAlignment="Left" Margin="280,0,0,0">
+                        <TextBox HorizontalAlignment="Left" Text="10.0" x:Name="textBoxWeightDodgechance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.0" x:Name="textBoxWeightHealing" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.15" x:Name="textBoxWeightHealth" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="18.0" x:Name="textBoxWeightHitchance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.01" x:Name="textBoxWeightHp5" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.0" x:Name="textBoxWeightMana" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.0" x:Name="textBoxWeightMp5" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="12.5" x:Name="textBoxWeightParrychance" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                        <TextBox HorizontalAlignment="Left" Text="0.01" x:Name="textBoxWeightReflect" Width="40" TextAlignment="Right" SelectionOpacity="1" VerticalAlignment="Top" Height="22" />
+                    </StackPanel>
+                    <StackPanel Name="sp12" Width="100" HorizontalAlignment="Left" Margin="320,0,0,0">
+                        <Label Content="Dodgechance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label126" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Healing" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label127" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Health" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label137" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Hitchance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label147" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Hp5" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label148" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Mana" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label149" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Mp5" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label177" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Parrychance" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label128" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                        <Label Content="Reflect" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Name="label188" VerticalAlignment="Top" Width="100" Padding="3,3" Height="22" />
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+            <TabControl Margin="0,230,0,0" Name="tabControl1" >
+                <DataGrid AutoGenerateColumns="False" Margin="-5,-11,-5,-5" Name="dataGrid1" VerticalAlignment="Stretch" Width="Auto" CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserSortColumns="False" CanUserResizeRows="False" RowHeaderWidth="0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Head" Width="50" IsReadOnly="True" Binding="{Binding HeadArmor}"/>
+                        <DataGridTextColumn Header="Neck" Width="50" IsReadOnly="True" Binding="{Binding NeckArmor}"/>
+                        <DataGridTextColumn Header="Shoulders" Width="50" IsReadOnly="True" Binding="{Binding ShouldersArmor}"/>
+                        <DataGridTextColumn Header="Back" Width="50" IsReadOnly="True" Binding="{Binding BackArmor}"/>
+                        <DataGridTextColumn Header="Chest" Width="50" IsReadOnly="True" Binding="{Binding ChestArmor}"/>
+                        <DataGridTextColumn Header="Wrist" Width="50" IsReadOnly="True" Binding="{Binding WristArmor}"/>
+                        <DataGridTextColumn Header="Hands" Width="50" IsReadOnly="True" Binding="{Binding HandsArmor}"/>
+                        <DataGridTextColumn Header="Waist" Width="50" IsReadOnly="True" Binding="{Binding WaistArmor}"/>
+                        <DataGridTextColumn Header="Legs" Width="50" IsReadOnly="True" Binding="{Binding LegsArmor}"/>
+                        <DataGridTextColumn Header="Feet" Width="50" IsReadOnly="True" Binding="{Binding FeetArmor}"/>
+                        <DataGridTextColumn Header="Finger" Width="50" IsReadOnly="True" Binding="{Binding FingerArmor}"/>
+                        <DataGridTextColumn Header="Finger2" Width="50" IsReadOnly="True" Binding="{Binding Finger2Armor}"/>
+                        <DataGridTextColumn Header="Trinket" Width="50" IsReadOnly="True" Binding="{Binding TrinketArmor}"/>
+                        <DataGridTextColumn Header="Trinket2" Width="50" IsReadOnly="True" Binding="{Binding Trinket2Armor}"/>
+                        <DataGridTextColumn Header="Rating" Width="50" IsReadOnly="True" Binding="{Binding Rating}"/>
+                        <DataGridTextColumn Header="Strength" Width="30" IsReadOnly="True" Binding="{Binding Strength}"/>
+                        <DataGridTextColumn Header="Agility" Width="30" IsReadOnly="True" Binding="{Binding Agility}"/>
+                        <DataGridTextColumn Header="Stamina" Width="30" IsReadOnly="True" Binding="{Binding Stamina}"/>
+                        <DataGridTextColumn Header="Intellect" Width="30" IsReadOnly="True" Binding="{Binding Intellect}"/>
+                        <DataGridTextColumn Header="Spirit" Width="30" IsReadOnly="True" Binding="{Binding Spirit}"/>
+                        <DataGridTextColumn Header="Armorvalue" Width="40" IsReadOnly="True" Binding="{Binding Armorvalue}"/>
+                        <DataGridTextColumn Header="Arcaneresistance" Width="30" IsReadOnly="True" Binding="{Binding Arcaneresistance}"/>
+                        <DataGridTextColumn Header="Fireresistance" Width="30" IsReadOnly="True" Binding="{Binding Fireresistance}"/>
+                        <DataGridTextColumn Header="Natureresistance" Width="30" IsReadOnly="True" Binding="{Binding Natureresistance}"/>
+                        <DataGridTextColumn Header="Frostresistance" Width="30" IsReadOnly="True" Binding="{Binding Frostresistance}"/>
+                        <DataGridTextColumn Header="Shadowresistance" Width="30" IsReadOnly="True" Binding="{Binding Shadowresistance}"/>
+                        <DataGridTextColumn Header="Attackpower" Width="30" IsReadOnly="True" Binding="{Binding Attackpower}"/>
+                        <DataGridTextColumn Header="Attackspeed" Width="30" IsReadOnly="True" Binding="{Binding Attackspeed}"/>
+                        <DataGridTextColumn Header="Blockchance" Width="30" IsReadOnly="True" Binding="{Binding Blockchance}"/>
+                        <DataGridTextColumn Header="Blockvalue" Width="30" IsReadOnly="True" Binding="{Binding Blockvalue}"/>
+                        <DataGridTextColumn Header="Critchance" Width="30" IsReadOnly="True" Binding="{Binding Critchance}"/>
+                        <DataGridTextColumn Header="Damage" Width="30" IsReadOnly="True" Binding="{Binding Damage}"/>
+                        <DataGridTextColumn Header="Defense" Width="30" IsReadOnly="True" Binding="{Binding Defense}"/>
+                        <DataGridTextColumn Header="Dodgechance" Width="30" IsReadOnly="True" Binding="{Binding Dodgechance}"/>
+                        <DataGridTextColumn Header="Healing" Width="30" IsReadOnly="True" Binding="{Binding Healing}"/>
+                        <DataGridTextColumn Header="Health" Width="30" IsReadOnly="True" Binding="{Binding Health}"/>
+                        <DataGridTextColumn Header="Hitchance" Width="30" IsReadOnly="True" Binding="{Binding Hitchance}"/>
+                        <DataGridTextColumn Header="Hp5" Width="30" IsReadOnly="True" Binding="{Binding Hp5}"/>
+                        <DataGridTextColumn Header="Mana" Width="30" IsReadOnly="True" Binding="{Binding Mp5}"/>
+                        <DataGridTextColumn Header="Mp5" Width="30" IsReadOnly="True" Binding="{Binding Hitchance}"/>
+                        <DataGridTextColumn Header="Parrychance" Width="30" IsReadOnly="True" Binding="{Binding Parrychance}"/>
+                        <DataGridTextColumn Header="Reflect" Width="30" IsReadOnly="True" Binding="{Binding Reflect}"/>
+                    </DataGrid.Columns>
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Style.Triggers>
+                                <Trigger Property="DataGridCell.IsSelected" Value="True">
+                                    <Setter Property="Background" Value="#FFFFFF" />
+                                    <Setter Property="Foreground" Value="#000000" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.CellStyle>
+                </DataGrid>
+            </TabControl>
+            <ProgressBar Height="24" HorizontalAlignment="Stretch" Margin="0,0,0,0" Name="progressBarSearch" VerticalAlignment="Bottom" Visibility="Hidden"/>
+            <Label Height="24" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="0,0,0,0" Name="labelProgressBarSearch" Content="" VerticalAlignment="Bottom" Visibility="Hidden"/>
+        </Grid>
+    </Grid>
+</Window>
